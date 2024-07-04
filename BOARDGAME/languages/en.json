@@ -9,33 +9,26 @@
         "3":"#",
         "4":"!"
     },
-    "AsciiEsc":{
-        "x1b[":{
-            "color":{
-                "256":"38;5;"
-            }
-        },
-        "003[":{
-            "color":{
-                "256":"38;5;"
-            }
-        }
-    },
     "Notification":{
         "Alert":{
-            "color":"196m"
+            "color":"196m",
+            "text":"Alert"
         },
         "Warning":{
-            "color":"208m"
+            "color":"208m",
+            "text":"Warning"
         },
         "Notice":{
-            "color":"226m"
+            "color":"226m",
+            "text":"Notice"
         },
         "Info":{
-            "color":"87m"
+            "color":"75m",
+            "text":"Info"
         },
         "Ask":{
-            "color":"82m"
+            "color":"82m",
+            "text":"Ask"
         }
     },
     "Error":{
@@ -97,7 +90,7 @@
         },
         "LoaderJson":{
             "Successfully":"Successfully Loader Json Content %s",
-            "Failed":"Failed Loader Json Content %s"
+            "Failed":"Failed Loader Json Content %s REASON=%s"
         }
     }
 }
