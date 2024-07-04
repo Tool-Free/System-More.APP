@@ -94,6 +94,10 @@
                 "Successfully":"Successfully to write %s",
                 "Error":"Failed to write %s REASON=%s"
             }
+        },
+        "LoaderJson":{
+            "Successfully":"Successfully Loader Json Content %s",
+            "Failed":"Failed Loader Json Content %s"
         }
     }
 }
