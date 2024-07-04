@@ -1,0 +1,99 @@
+{
+    "IconMessages":{
+        "1":"[%s] ",
+        "2":"<%s> "
+    },
+    "Icon":{
+        "1":"+",
+        "2":"-",
+        "3":"#",
+        "4":"!"
+    },
+    "AsciiEsc":{
+        "x1b[":{
+            "color":{
+                "256":"38;5;"
+            }
+        },
+        "003[":{
+            "color":{
+                "256":"38;5;"
+            }
+        }
+    },
+    "Notification":{
+        "Alert":{
+            "color":"196m"
+        },
+        "Warning":{
+            "color":"208m"
+        },
+        "Notice":{
+            "color":"226m"
+        },
+        "Info":{
+            "color":"87m"
+        },
+        "Ask":{
+            "color":"82m"
+        }
+    },
+    "Error":{
+        "Json":{
+            "languages":{
+                "NotFound":"Not found requirement '%s'",
+                "Unexpected":"Unknown error verify '%s'"
+            }
+        },
+        "Permission":{
+            "NotAllow":"Permission not allow %s"
+        },
+        "Website":{
+            "ErrorPage":{
+                "StatusCode":{
+                    "404":"%s There page has been moved!",
+                    "403":"%s There page has been Forbidden",
+                    "500":"%s Error by website",
+                    "502":"%s Bad Gateway",
+                    "503":"%s Server overload",
+                    "504":"%s Gateway Timeout"
+                }
+            }
+        },
+        "Code":{
+            "Python":"Error has been return with '%s'"
+        }
+    },
+    "Installer":{
+        "Requests":{
+            "Try":"Trying to connect [%s] With Request",
+            "Successfully":"Successfully to connected [%s] by Request",
+            "Failed":"Failed to connect [%s] With Request REASON=%s",
+            "Disconnect":"Disconnect from [%s] With Request REASON=%s",
+            "Exit":"Connection Close [%s] With Request"
+        },
+        "Sockets":{
+            "Try":"Trying to connect [%s] With Socket",
+            "Successfully":"Successfully to connected [%s] by Socket",
+            "Failed":"Failed to connect [%s] With Socket REASON=%s",
+            "Disconnect":"Disconnect from [%s] With Socket REASON=%s",
+            "Exit":"Connection Close [%s] With Socket"
+        },
+        "HashTest":{
+            "Try":"Trying to hash %s with %s and %s",
+            "Match":"Successfully to verify %s and %s",
+            "NotMatch":"Not match to verify %s and %s",
+            "Failed":"Failed to verify %s and %s REASON=%s"
+        },
+        "File":{
+            "Read":{
+                "Successfully":"Successfully to read %s",
+                "Error":"Failed to read %s REASON=%s"
+            },
+            "Write":{
+                "Successfully":"Successfully to write %s",
+                "Error":"Failed to write %s REASON=%s"
+            }
+        }
+    }
+}
