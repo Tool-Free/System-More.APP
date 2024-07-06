@@ -1,17 +1,19 @@
-import os,json,base64,time
+import os,json,base64,time,string,requests
 
 def json_reader(file_path=''):
     path = os.getcwd() + file_path
     file_name = os.path.basename(path)
-    
-    try:
-        with open(path, 'r') as f:
+    e2 = ''
+    for a in ['r','rb']:
+     try:
+        with open(path, a) as f:
             if file_name.endswith(".json"):
                 return json.load(f), file_name.split('.')[0]
             else:
                 return f.read(), file_name.split('.')[0]
-    except Exception as e:
-        return False, e
+     except Exception as e:
+         e2 = e
+    return False, e2
 
 def execute_value(files_require):
     value_have = {}
@@ -52,9 +54,33 @@ def execute_value(files_require):
         time.sleep(0.1)
     return value_have
 
-def json_decoder_base64(name,json_val):
-    return json.loads(base64.b64decode(json_val[name])).decode()
+def get_data(value,data):
+   path = value.split('>')
+   temp_data = data
 
-files_requirement = ['\\languages\\en.json', '\\languages\\th.json', '\\settings\\menu.json']
-json_storage = execute_value(files_require=files_requirement)
-list_value = json_storage.keys()
+   for a in path:
+        if a in temp_data:
+            temp_data = temp_data[a]
+        else:
+            return "Error: Invalid path"
+
+   return temp_data
+
+def json_get(json_dict,value_name='',value=''):
+    try:
+     if not isinstance(json_dict[value_name], dict):
+      data = json.loads(base64.b64decode(json_dict[value_name]).decode())
+      if len(value) == 0:
+        return data
+     else:
+        return get_data(value,data)
+    except:
+       return get_data(value,json_dict)
+
+json_storage = execute_value(files_require=['\\languages\\en.json', '\\languages\\th.json','\\settings\\menu.json'])
+json_menu = json_get(json_storage,'Json_menu')
+json_languages_en = json_get(json_storage,'Json_en')
+json_languages_th = json_get(json_storage,'Json_th')
+
+set_languages = json_get(json_menu,value='languages')
+set_ask = json_get(json_menu,value='ask')
